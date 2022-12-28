@@ -17,4 +17,4 @@ def estimator_fn(estimator_params: Dict[str, Any] = None):
         estimator_params = {}
     from sklearn.linear_model import LinearRegression
 
-    return LinearRegression(random_state=42, **estimator_params)
+    return LinearRegression(fit_intercept = True, **estimator_params)
