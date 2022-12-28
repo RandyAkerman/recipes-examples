@@ -15,6 +15,6 @@ def estimator_fn(estimator_params: Dict[str, Any] = None):
     """
     if estimator_params is None:
         estimator_params = {}
-    from sklearn.linear_model import SGDRegressor
+    from sklearn.linear_model import LinearRegression
 
-    return SGDRegressor(random_state=42, **estimator_params)
+    return LinearRegression(random_state=42, **estimator_params)
