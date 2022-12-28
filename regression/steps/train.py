@@ -15,6 +15,6 @@ def estimator_fn(estimator_params: Dict[str, Any] = None):
     """
     if estimator_params is None:
         estimator_params = {}
-    from sklearn.linear_model import LinearRegression
+    from flaml import AutoML
 
-    return LinearRegression(fit_intercept = True, **estimator_params)
+    return AutoML()
